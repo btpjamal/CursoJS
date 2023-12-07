@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gringo or not</title>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+    Em qual Pais você mora? <input type="text" id="pergunta_pais">
+    <input type="button" value="enviar" id="enviar_resposta" onclick="analise()">
+    <div id="resposta_site">
+
+    </div>
+    <script>
+        function analise(){
+            var pergunta_pais= document.getElementById('pergunta_pais')
+            var enviar_resposta= document.getElementById('enviar_resposta')
+            var resposta_site= document.getElementById('resposta_site')
+
+            resposta_site.innerHTML+=(`<p>Você informou o pais: ${pergunta_pais.value}</p>`)
+
+            if(pergunta_pais.value != 'brasil'){
+                resposta_site.innerHTML+=(`<p>Você é gringo</p>`)
+            }else{
+                resposta_site.innerHTML+=(`<p>Você é Brasileiro</p>`)
+            }
+
+        }
+        
+
+    </script>
+</body>
+</html>
